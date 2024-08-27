@@ -15,15 +15,25 @@ ul {
   list-style-type: none;
 }
 
+input[type="search"] {
+  appearance: none;
+  outline: none;
+  border: none;
+  font: inherit;
+}
+
 body {
+  background-color: var(--background-color);
   height: 100vh;
   display: grid;
   grid-template-columns: 280px 1fr;
+  grid-template-rows: auto 1fr;
 }
 
 .sidebar {
   padding: 10px;
   background-color: var(--primary-color);
+  grid-row: 1 / 3;
 }
 .sidebar a {
   text-decoration: none;
@@ -59,4 +69,78 @@ body {
 }
 .sidebar .nav-link img {
   margin: 0 15px;
+}
+
+header {
+  background-color: var(--background-color-2);
+  padding: 10px 40px;
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.1);
+}
+
+header .top,
+header .utils {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+header .search {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  flex: 1;
+}
+header .search input {
+  border-radius: 50px;
+  background-color: var(--background-color);
+  padding: 7px 15px;
+  width: 80%;
+}
+header svg {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+header .top .avatar {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+header .top .username {
+  font-weight: 700;
+}
+
+header .bottom {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .bottom .profile {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: 70px 1fr;
+  grid-template-rows: 20px 20px;
+  align-items: center;
+}
+header .bottom .profile img {
+  cursor: pointer;
+  grid-row: 1 / -1;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+header .bottom .actions button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  color: white;
+  background-color: var(--primary-color);
+  border-radius: 50px;
+  margin: 0 10px;
+  padding: 10px;
+  width: 100px;
+  font-weight: 700;
 }
