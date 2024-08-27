@@ -6,7 +6,7 @@
 
 - Create a simple UI according to the following design:
 
-![This is the Odin Dashboard UI](./design/dashboard-project.png)
+![This is the Odin Dashboard UI](./assets/design/dashboard-project.png)
 
 # Inclusion
 
