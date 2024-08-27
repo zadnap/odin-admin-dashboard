@@ -15,12 +15,14 @@ ul {
   list-style-type: none;
 }
 
+body {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+}
+
 .sidebar {
-  position: fixed;
-  padding: 10px 100px 10px 10px;
-  top: 0;
-  left: 0;
-  bottom: 0;
+  padding: 10px;
   background-color: var(--primary-color);
 }
 .sidebar a {
@@ -48,6 +50,9 @@ ul {
   width: 20px;
   height: 20px;
   margin: 0 15px;
+}
+.sidebar .nav-link h3 {
+  font-weight: 500;
 }
 .sidebar .nav-link:nth-child(6) {
   margin-bottom: 30px;
